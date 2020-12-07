@@ -12,7 +12,6 @@ def get_substring_index(input_list) -> int:
     except:
         return -1
 
-
 # credits to ThePrimagen for showing this awesome and efficient solution 
 # using recursion
 
@@ -66,21 +65,6 @@ def solve_right_one_down_two(sequence: str, index: int = 0) -> int:
 
     return tree_count + solve_right_one_down_two(sequence[(max_index*2)+2:],index+1)
 
-
-print('DEBUG')
-print('Should result in 7 for sample. Real should result in: 259. Actual result: {}'.format(solve_original(problem_input)))
-print('Should result in 2. Actual result: {}'.format(solve_right_one_down_one(problem_input)))
-print('Should result in 3. Actual result: {}'.format(solve_right_five_down_one(problem_input)))
-print('Should result in 4. Actual result: {}'.format(solve_right_seven_down_one(problem_input)))
-print('Should result in 2. Actual result: {}'.format(solve_right_one_down_two(problem_input)))
-
-
-""" print('Should result in 336. Actual result: {}'.format(solve_original(problem_input) * 
-      solve_right_one_down_one(problem_input) * 
-      solve_right_five_down_one(problem_input) * 
-      solve_right_seven_down_one(problem_input) * 
-      (solve_right_one_down_two(problem_input)//2)))
-"""
 print('Result: {}'.format(solve_original(problem_input) * 
       solve_right_one_down_one(problem_input) * 
       solve_right_five_down_one(problem_input) * 
