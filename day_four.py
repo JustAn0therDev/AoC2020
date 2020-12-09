@@ -3,10 +3,6 @@ import re
 problem_input = [] 
 problem_input_str = ''
 
-# There are a few ways to solve this:
-# Either by checking with a full if statement 
-# or having a data structure that represents the passport in question.
-
 def has_item(iterable: list, item: str) -> bool:
     try:
         # not using the value from index anywhere because if not found
