@@ -13,7 +13,7 @@ problem_input = []
 # while a '\n' character is not found
 # and keep reading it over and over again,
 # looking for the number of answers on each letter
-# using dp
+# using dp, or doing something similar like below:
 
 answer = 0
 dp = []
@@ -41,8 +41,6 @@ with open('daysix_input.txt', 'r') as reader:
             dp = []
         else:
             dp.append(line.replace('\n', ''))
-
-
 
 answer += count_char_in_dp()
 print(answer)
