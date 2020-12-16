@@ -24,7 +24,6 @@ def part_one(bag_set: set) -> None:
 # to get the solution: print(len(bag_set) - 1) | ps: ("- 1" being the shiny gold bag that does not count)
 
 # Part Two
-
 # Returns int receiving tuple with bag name and amount, calling the innermost bags using recursion 
 def part_two(bag_name: tuple) -> int:
     count = 1 
@@ -41,11 +40,13 @@ def part_two(bag_name: tuple) -> int:
 
             for bag in bags_and_qtd:
                 if ('no other' not in bag[0] or bag[0] != 'no other') and bag[1] is not None:
-                    print(bag)
                     result = part_two(bag)
                     if type(result) == int:
                         count += int(bag[1]) * result
     return count
     
 # again, the count should have - 1 to exclude the shiny gold bag previously included in the list
+
+# part_one(bag_set)
+# print(len(bag_set) - 1)
 print(part_two(('shiny gold', '1')) - 1)
