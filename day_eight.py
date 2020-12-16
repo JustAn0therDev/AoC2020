@@ -92,9 +92,6 @@ if part_two:
         else:
             continue
 
-        print(instructions[0], instructions[1])
-        print(modified_problem_input)
-
         if not loops:
             print(inner_acc)
             break
